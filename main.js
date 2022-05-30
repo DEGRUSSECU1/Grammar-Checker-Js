@@ -4,3 +4,32 @@ let storyWords = story.split(' ');
 let unnecessaryWord = 'literally';
 let misspelledWord = 'beautifull';
 let badWord = 'freaking';
+
+
+
+//console.log(storyWords)
+//console.log(storyWords.join(' '));
+
+let count = 0;
+storyWords.forEach(storyWord => {
+ count += 1;
+})
+
+
+storyWords = storyWords.filter( word =>{
+if(word !== unnecessaryWord ){
+  return word
+}
+
+})
+
+
+const spellChecked = storyWords.map(word => {
+if( word === misspelledWord) {
+  return misspelledWord = 'beautiful';
+}else{
+  return word
+}
+})
+console.log(spellChecked.join(' '))
+console.log(count);
